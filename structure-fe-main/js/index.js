@@ -23,5 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
 
         app.appendChild(articleElement);
+
+       
     });
 });
