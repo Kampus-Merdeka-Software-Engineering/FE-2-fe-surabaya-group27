@@ -163,114 +163,79 @@ body .navigasi{
     display: block;
    }
 
-   .team-section{
-    width: 100%;
-   }
-
-   .team-section .container2{
-    width: 80%;
-    margin:auto;
-   }
-
-   .team-section .container2 .row{
-    width: 60%;
-    margin: auto;
-   }
-  
-   .team-section .container2 .row .title{
-    text-align: center;
-    margin-top: 50px;
-   }
-
-   .team-section .container2 .row .title h1{
-    font-size: 35px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color:#6096B4;
-   }
-   .team-section .container2 .row .title p {
-    font-size: 18px;
-    font-family: sans-serif;
-    margin: 30px 0px;
-    color:#a3a3a3;
-   }
-
-   .team-section .container2 .team-card {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-    margin-top: 50px;
-   }
-
-   .team-section .container2 .team-card .card{
-    width: 100%;
-    background-color: #fafafa;
+   .contact .row {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
     align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    cursor: pointer;
    }
 
-   .team-section .container2 .team-card .card:hover{
-    background-color: #fafafa;
-    transition: 0.3s;
+   .contact .row form {
+    flex: 1 1 40 rem;
+    padding: 2 rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border:.1rem solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: .5rem;
    }
 
-   .team-section .container2 .team-card .card .image-section img{
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    border: 6px solid #fff;
+   .contact .row .image {
+    flex: 1 1 40 rem;
    }
 
-   .team-section .container2 .team-card .card .content{
-    width: 100%;
-    text-align: center;
+   .contact .row image img {
+   width: 100%;
    }
 
-   .team-section .container2 .team-card .card .content h3{
-   font-size: 27px;
-   margin-top: 10px;
-   letter-spacing: 1.5px;
-   color: #639ab8;
+   .contact .row form .box {
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba (0,0,0,.1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width:90%;
    }
 
-   .team-section .container2 .team-card .card .content h4{
-    font-size: 17px;
-    margin-top: 10px;
-    letter-spacing: 1.5px;
-    color: #6e6e6e;
+   .contact .row form .box:focus{
+    border-color: #ACB1D6 ; 
+   }
+
+   .contact .row form textarea{
+    height: 15px;
+    resize: none;
+   }
+
+    .notes {
+        font-size: 20px; 
+        line-height: 1.6; 
+        margin-bottom: 20px;
+        font-style: arial;
+        text-align: justify;
     }
 
-    .team-section .container2 .team-card .card .content p{
-        font-size: 15px;
-        margin-top: 16px 0px;
-        line-height: 1.5;
-        color: #6c6c6c;
-        }
-@media screen and (max-width:900px){
-    .team-section .container2 .team-card {
-        grid-template-columns: repeat(2, 1fr)
-       }
-}
-@media screen and (max-width:900px){
-    .team-section .container2 .team-card {
-        grid-template-columns:  1fr;
-       }
-}
 
-  footer{
+   .btn-send {
+    display: inline-block;
+    line-height: normal;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #6096B4;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    float: left bottom;
+   }
+
+   footer{
     gap: 4px;
-    height: 130px;
+    height: 140px;
     width: 100%;
     padding: 10px;
     background-color:#6096B4;
     color:black;
     text-align: center;
-   
+    border-radius: 0.5rem;
     clear: both;
 }
 
@@ -301,3 +266,5 @@ footer .grid2 a:hover{
     color: blue;
     transition: all .6s ease_in-out
 }
+
+
