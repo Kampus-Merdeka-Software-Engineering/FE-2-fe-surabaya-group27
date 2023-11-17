@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../structure-fe-main/css/news.css">
+
     <title>DailyFact.com</title>
 
     <div class="fContainer">
@@ -11,12 +12,6 @@
           <div class="brand"></div>
           <div class="firstname">DailyFact</div>
           <div class="lastname">.com</div>
-          <div class="container">
-            <form action="">
-                <input type="text" id="search-input" placeholder="Search for news...">
-                <button type="submit" id="search-btn">Search</button>
-            </form>
-        </div>  
         </nav>
         </div>
          
@@ -32,10 +27,12 @@
               <option>Nasional</option>
               <option>Internasional</option>
               <option>Ekonomi</option>
+              <option>Cuaca</option>
               <option>Teknologi</option>
               <option>Otomotif</option>
               <option>Olahraga</option>
               <option>Politik</option>
+              <option>Gaya Hidup</option>
             </select>
             <!-- 
                <a class="active">Menu</a>
@@ -49,46 +46,155 @@
             </div>
       </div>
     </div>
+    
+    <div class="container">
+      <form action="">
+          <input type="text" id="search-input" placeholder="Search for news...">
+          <button type="submit" id="search-btn">Search</button>
+      </form>
+  </div>  
+   
+    <div class="carousel">
+      <div class="carousel_inner">
+         <div class="carousel_item carousel_item__active">
+            <img src="/structure-fe-main/img/Amazon PHK karyawan.jpg" alt="" class="carousel_img">
+            <div class="carousel_caption">
+              <div class="hero-content">
+                <div class="max-w-md">
+                  <h1 class="mb-5">TOP NEWS !!!</h1>
+                  <p class="mb-5">Amazon Kembali PHK Karyawan, Kali Ini Divisi Musik!!</p>
+                  <button class="btn-primary"> <a href="../structure-fe-main/Read.html">Read News</a></button>
+                </div>
+              </div>
+           </div>
+         </div>
+
+         <div class="carousel_item">
+            <img src="/structure-fe-main/img/alasan cuaca terlalu panas.jpeg" alt="" class="carousel_img">
+            <div class="carousel_caption">
+              <h1 class="carousel_title">BMKG Ungkap Alasan Cuaca RI Panas</h1>
+              <p class="carousel_description">Selama satu minggu terakhir di bulan September 2023, sejumlah wilayah Indonesia mengalami fenomena suhu panas yang cukup terik.</p>
+           </div>
+         </div>
+         <div class="carousel_item">
+            <img src="/structure-fe-main/img/Jokowi Lantik Panglima.jpeg" alt="" class="carousel_img">
+            <div class="carousel_caption">
+              <h1 class="carousel_title">DPR Ingin Jokowi Lantik Panglima TNI Baru</h1>
+              <p class="carousel_description">Wakil Ketua DPR Lodewijk Freidrich Paulus...</p>
+           </div>
+         </div>
+      </div>
+
+      <div class="carousel_indicator">
+         <button class="carousel_dot carousel_dot__active"></button>
+         <button class="carousel_dot"></button>
+         <button class="carousel_dot"></button>
+      </div>
+
+      <div class="carousel_control">
+         <button class="carousel_button carousel_button__prev">
+            <i class="fas fa-chevron-left"></i>
+         </button>
+         <button class="carousel_button carousel_button__next">
+            <i class="fas fa-chevron-right"></i>
+         </button>
+      </div>
+   </div>
 
 
-    <div class="hero" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
-        <div class="hero-content">
-          <div class="max-w-md">
-            <h1 class="mb-5">TOP NEWS !!!</h1>
-            <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button class="btn-primary"> <a href="../structure-fe-main/Read.html">Read News</a></button>
+      <div class="news-section">
+        <div class="container2">
+          <div class="row">
+            <div class="title">
+                <h1>Pilihan Berita</h1>
+               
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="card">
+              <div class="image-section">
+                <img src="../structure-fe-main/img/Jokowi Lantik Panglima.jpeg">
+              </div>
+              <div class="content">
+                <h3>DPR Ingin Jokowi Lantik Panglima TNI Baru Sebelum 26 November</h3>
+                <h4>Nasional</h4>
+                <p>
+                  Jakarta, CNN Indonesia -- Wakil Ketua DPR Lodewijk Freidrich Paulus berharap Presiden Joko Widodo (Jokowi) melantik Panglima TNI baru pengganti Laksamana Yudo Margono sebelum 26 November 2023.
+                  Lodewijk mengatakan Yudo bakal memasuki masa pensiun pada 26 November. Ia tak ingin ada kesan panglima TNI dijabat oleh orang yang sudah pensiun</p>
+                </p>
+              </div>
+            </div>
+  
+            <div class="card">
+              <div class="image-section">
+                <img src="../structure-fe-main/img/ROLLS ROYCE.jpg">
+              </div>
+              <div class="content">
+                <h3>Rolls-Royce Berubah Jadi Merek Mobil Listrik Sepenuhnya 2030</h3>
+                <h4>Otomotif</h4>
+                <p>Jakarta, CNN Indonesia -- Pabrikan mobil mewah Rolls-Royce berencana hanya memproduksi mobil listrik pada awal 2030. Ini bakal mengubah Rolls-Royce sepenuhnya menjadi merek mobil listrik.
+                  Hal tersebut disampaikan Bos BMW Oliver Zipse ketika membahas sejumlah model mobil BMW yang akan datang baru-baru ini</p>
+              </div>
+            </div>
+  
+            <div class="card">
+              <div class="image-section">
+                <img src="../structure-fe-main/img/alasan cuaca terlalu panas.jpeg">
+              </div>
+              <div class="content">
+                <h3>BMKG Ungkap Alasan Cuaca RI Panas, Oktober Makin Mendidih</h3>
+                <h4>Cuaca</h4>
+                <p>Jakarta, CNBC Indonesia - Selama satu minggu terakhir di bulan September 2023, sejumlah wilayah Indonesia mengalami fenomena suhu panas yang cukup terik. Bahkan fenomena itu kemungkinan akan berlanjut hingga bulan Oktober ini.
+                  Badan Meteorologi, Klimatologi, dan Geofisika menjelaskan suhu maksimum terjadi pada 22-29 September 2023. Dengan beberapa wilayah mengalami suhu sekitar 35-38 derajat celcius pada siang hari.</p>
+              </div>
+            </div>
+  
+            <div class="card">
+              <div class="image-section">
+                <img src="../structure-fe-main/img/prabowo-dan-gibran-resmi-daftar-capres-cawapres-di-kpu-24_169.jpeg">
+              </div>
+              <div class="content">
+                <h3>Prabowo dan Gibran Resmi Daftar Capres-Cawapres di KPU</h3>
+                <h4>Politik</h4>
+                <p>Jakarta, CNN Indonesia -- Usai dari KPU, Prabowo Subianto-Gibran Rakabuming mengucapkan terima kasih dan mengajak para pendukungnya untuk menjaga kedamaian selama Pilpres 2024.</p>
+              </div>
+            </div>
+  
+            <div class="card">
+              <div class="image-section">
+                <img src="../structure-fe-main/img/timnas-indonesia-u-17_169.jpeg">
+              </div>
+              <div class="content">
+                <h3>Bobol Panama, Indonesia U-17 Samakan Skor Jadi 1-1</h3>
+                <h4>Olahraga</h4>
+                <p>Timnas Indonesia U-17 menyamakan skor menjadi 1-1 atas Panama U-17. Gol dicetak Arkhan Kaka di awal babak kedua.Bermain di Stadion Gelora Bung Tomo, Surabaya, Senin (13/11/2023), Indonesia sempat tertinggal 0-1. Gawang Ikram Alghiffari dibobol Oldemar Castillo jelang istirahat.</p>
+              </div>
+            </div>
+  
+            <div class="card">
+              <div class="image-section">
+                <img src="../structure-fe-main/img/saffron.jpeg">
+              </div>
+              <div class="content">
+                <h3>Mengapa Saffron Begitu Mahal?</h3>
+                <h4>Gaya Hidup</h4>
+                <p>Jakarta, CNN Indonesia -- Saffron merupakan salah satu rempah paling berharga sejak ribuan tahun lalu. Namun apa sebenarnya yang membuat rempah ini begitu mahal?
+                  Saffron telah digunakan oleh sejumlah kekaisaran kuno untuk mewarnai pakaian, bahan baku parfum, dan memberikan rasa pada makanan.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="carousel ">
-        <div class="carousel-item ">
-          <img class="slide" src="../structure-fe-main/img/Amazon PHK karyawan.jpg"  />
-        </div> 
-        <div class="carousel-item">
-          <img class="slide" src="../structure-fe-main/img/Amazon PHK karyawan.jpg"  />
-        </div> 
-        <div class="carousel-item">
-          <img class="slide" src="../structure-fe-main/img/Amazon PHK karyawan.jpg"  />
-        </div> 
-        <div class="carousel-item">
-          <img class="slide" src="../structure-fe-main/img/Amazon PHK karyawan.jpg"  />
-        </div> 
-        <div class="carousel-item">
-          <img class="slide" src="../structure-fe-main/img/Amazon PHK karyawan.jpg"  />
-        </div> 
-        <div class="carousel-item">
-          <img class="slide" src="../structure-fe-main/img/Amazon PHK karyawan.jpg"  />
-        </div> 
-        <div class="carousel-item">
-          <img class="slide" src="../structure-fe-main/img/Amazon PHK karyawan.jpg"  />
-        </div> 
-        <button class="prev">Previous</button>
-        <button class="next">Next</button>
-      </div> 
-</body>
 
-<footer class="footer">
+    
+
+    <script src="/structure-fe-main/js/news.js"></script>
+        </body>
+         
+    
+
+ <footer class="footer">
     <div class="grid1">
        <a href="../structure-fe-main/about.html">About us</a>
        <a href="/structure-fe-main/Contact.html">Contact</a>
@@ -103,5 +209,5 @@
    <aside>
      <p>Copyright © 2023 - Group 27 Section Surabaya</p>
    </aside>
-   </footer>
+   </footer> 
 </html>

@@ -1,3 +1,9 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   background-color: #F1F1F1;
   text-align: center;
@@ -5,8 +11,6 @@
 }
 
 .fContainer {
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
   display: flex;
   width: 100%;
@@ -57,8 +61,17 @@
 }
 
 .container1 {
+  display: flex;
+  font-size: 20px;
   overflow: hidden;
-  background-color: #333;
+  padding: 10px 20px;
+  font-size: 20px;
+  height: 60px;
+  weight: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #93BFCF;
 }
 
 
@@ -107,18 +120,6 @@ h1 {
   transition: all .6s ease_in-out
 }
 
-
-.container1{
-  padding: 10px 20px;
-  font-size: 20px;
-  height: 60px;
-  weight: 10px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #93BFCF;
-
-  }
 body .navigasi{
   display: flex;
   justify-content: flex-end;
@@ -163,56 +164,81 @@ body .navigasi{
   display: block;
  }
 
-   .column {
-    float: left;
-    padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+ .content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  flex: 1;
+  padding-right: 20px;
+  margin: 20px 20px; /* Spasi antara konten dan info penulis */
+}
+
+.author-info {
+  flex: 1;
+  width: 60%;
+  margin: auto;
+  margin-left: 20px;
+
+}
+
+.author h2 {
+  text-align: justify;
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-bottom: 60px;
+  margin-left: 20px;
+
   
-  .column img{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    
+}
+
+.author p {
+  font-size: 15px;
+  padding: 10px; /* Atur ruang di dalam paragraf */
+  border: 1px solid #ccc; /* Atur border */
+  margin: auto;
+  text-align: justify center;
+
+}
+
+.author{
+  background-color: lightgray;
+  display: flex;
+}
+
+.profilpct{
+  width: 150px;
+  height: 200px;
+  background-color: lightgray;
+}
+
+
+/* Untuk tampilan di perangkat mobile */
+@media (max-width: 768px) {
+  .content-wrapper {
+      flex-direction: column;
   }
+
+  .content,
+  .author-info {
+      padding-right: 0; 
+      /* Menghapus spasi antara elemen pada tampilan mobile */
+  }
+}
+
   /* Left and right column */
   .column1 {
-    width: 100%;
+    width: 90%;
     align-item: center;
     text-align: justify ;
     padding: 40px;
     height: 130px;
-    margin-bottom:50px;
-  }
-  
-  /* Middle column */
-  .column2 {
-    
    
   }
-  .author{
-    background-color: lightgray;
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    border-radius: 50%;
-  }
 
-  .profilpct{
-    width: 400px;
-    height: 200px;
-    background-color: lightgray;
-  }
-
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-  
-
- 
-   
-  
   footer{
+    margin-top: 50%;
     gap: 4px;
     height: 130px;
     width: 100%;
@@ -221,18 +247,14 @@ body .navigasi{
     color:black;
     text-align: center;
     clear: both;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    min-height: 10vh;
-    margin-top: auto;
+ 
+
 }
 
 footer .grid1{
     display: grid;
     grid-template-row: repeat(autofit, minmax(200px, 1fr));
     gap:4px;
-    margin-top: auto;
-   
 }
 
 footer .grid1 a:hover{
@@ -247,7 +269,6 @@ footer .grid2{
     padding-top: 10px;
     width:24;
     height:24;
-    
     
 }
 

@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         app.appendChild(articleElement);
 
+        //slides top news
        
     });
 });
