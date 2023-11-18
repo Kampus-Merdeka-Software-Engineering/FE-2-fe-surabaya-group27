@@ -237,18 +237,117 @@ body .navigasi{
    
   }
 
-  footer{
-    margin-top: 50%;
-    gap: 4px;
-    height: 130px;
-    width: 100%;
-    padding: 10px;
-    background-color:#6096B4;
-    color:black;
-    text-align: center;
-    clear: both;
- 
+.news-section{
+  width: 100%;
+ }
 
+ .news-section .container2{
+  width: 80%;
+  margin:auto;
+ }
+
+ .news-section .container2 .row{
+  width: 60%;
+  margin: auto;
+ }
+
+ .news-section .container2 .row .title{
+  text-align: center;
+  margin-top: 500px;
+ }
+
+ .news-section .container2 .row .title h1{
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color:#6096B4;
+ }
+ .news-section .container2 .row .title p {
+  font-size: 18px;
+  font-family: sans-serif;
+  margin: 30px 0px;
+  color:#a3a3a3;
+  text-align: justify;
+ }
+
+ .news-section .container2 .news-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  margin-top: 50px;
+ }
+
+ .news-section .container2 .news-card .card{
+  width: 100%;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  cursor: pointer;
+ }
+
+ .news-section .container2 .news-card .card:hover{
+  background-color:#BDCDD6 ;
+  transition: 0.3s;
+ }
+
+ .news-section .container2 .news-card .card .image-section img{
+  height: 100%;
+  width: 100%;
+  border: 6px solid #fff;
+ }
+
+ .news-section .container2 .news-card .card .content{
+  width: 100%;
+  height:auto;
+  text-align: center;
+ }
+
+ .news-section .container2 .news-card .card .content h3{
+ font-size: 27px;
+ margin-top: 10px;
+ letter-spacing: 1.5px;
+ color: #639ab8;
+ }
+
+ .news-section .container2 .news-card .card .content h4{
+  font-size: 17px;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+  color: #6e6e6e;
+  }
+
+  .news-section .container2 .news-card .card .content p{
+      font-size: 15px;
+      margin-top: 16px 0px;
+      line-height: 1.5;
+      color: #6c6c6c;
+      }
+
+@media screen and (max-width:900px){
+  .news-section .container2 .news-card {
+      grid-template-columns: repeat(2, 1fr)
+     }
+}
+@media screen and (max-width:900px){
+  .news-section .container2 .news-card {
+      grid-template-columns:  1fr;
+     }
+}
+
+footer{
+  margin-top: 20%;
+  gap: 4px;
+  height: 130px;
+  width: 100%;
+  padding: 10px;
+  background-color:#6096B4;
+  color:black;
+  text-align: center;
+  clear: both;
 }
 
 footer .grid1{
@@ -268,8 +367,7 @@ footer .grid2{
     color: #BDCDD6;
     padding-top: 10px;
     width:24;
-    height:24;
-    
+    height:24; 
 }
 
 footer .grid2 a:hover{

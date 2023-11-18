@@ -220,10 +220,11 @@ body .navigasi{
    }
 
    .team-section .container2 .team-card .card .image-section img{
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
+    height: 250px;
+    width: 200px;
+    border-radius: 10%;
     border: 6px solid #fff;
+    position: fix;
    }
 
    .team-section .container2 .team-card .card .content{

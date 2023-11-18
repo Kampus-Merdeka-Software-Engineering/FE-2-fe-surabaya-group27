@@ -163,69 +163,76 @@ body .navigasi{
     display: block;
    }
 
-   .contact .row {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    gap: 1.5rem;
-    align-items: center;
-   }
-
-   .contact .row form {
-    flex: 1 1 40 rem;
-    padding: 2 rem 2.5rem;
-    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
-    border:.1rem solid rgba(0,0,0,.1);
-    background: #fff;
-    border-radius: .5rem;
-   }
-
-   .contact .row .image {
-    flex: 1 1 40 rem;
-   }
-
-   .contact .row image img {
-   width: 100%;
-   }
-
-   .contact .row form .box {
-    padding: 1rem;
-    font-size: 1.7rem;
-    color: #333;
-    text-transform: none;
-    border: .1rem solid rgba (0,0,0,.1);
-    border-radius: .5rem;
-    margin: .7rem 0;
-    width:90%;
-   }
-
-   .contact .row form .box:focus{
-    border-color: #ACB1D6 ; 
-   }
-
-   .contact .row form textarea{
-    height: 15px;
-    resize: none;
-   }
-
-    .notes {
-        font-size: 20px; 
-        line-height: 1.6; 
-        margin-bottom: 20px;
-        font-style: arial;
-        text-align: justify;
-    }
-
-
-   .btn-send {
-    display: inline-block;
-    line-height: normal;
+   /* Style for Contact Section */
+.contact {
     text-align: center;
-    vertical-align: middle;
+    padding: 50px;
+    background-color: #f7f7f7;
+}
+
+.contact .heading {
+    margin-bottom: 20px;
+}
+
+.contact .notes {
+    margin-bottom: 30px;
+}
+
+.contact .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-form {
+    flex: 1;
+    text-align: left;
+}
+
+.box {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea.box {
+    resize: vertical;
+}
+
+.btn-send {
+    text-align: center;
+}
+
+.btn-send input[type="submit"] {
+    padding: 10px 20px;
     background-color: #6096B4;
-    border-radius: 0.25rem;
-    padding: 0.5rem 1rem;
-    float: left bottom;
-   }
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-send input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    float: right;
+    margin: 20px auto;
+}
+
 
    footer{
     gap: 4px;

@@ -54,6 +54,7 @@
   top: 20px;
   right: 10px;
 }
+
 #search-input{
     flex: 1;
     padding: 10px;
@@ -100,7 +101,7 @@
   h1 {
     color: #333;
     margin-bottom: 20px;
-}
+   }
 
 
  .container1{
@@ -175,12 +176,12 @@ body{
    }
 
      .btn-primary a {
-    color: #557A46;
+    color: black;
     display: block;
    }
 
     .btn-primary a:hover {
-    color: #557A46;
+    color: #BDCDD6;
     transition: all .6s ease_in-out
 }
    
@@ -314,7 +315,6 @@ body{
        
 }
        
- 
  .carousel_inner{
     width: 100%;
     overflow: hidden;
@@ -395,7 +395,7 @@ body{
     height: 100%;
     padding: 3rem 4rem;
     text-align: center;
-    color: #fff;
+    color: black;
     z-index: 1;
  }
  
@@ -447,7 +447,7 @@ body{
     height: 100%;
  }
  
- .carousel_button{
+ .carousel_button {
     display: block;
     padding-inline: 1rem;
     font-family: "Raleway", sans-serif;
