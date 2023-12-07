@@ -38,7 +38,7 @@
     
     <div class="container">
       <form action="">
-          <input type="text" id="search-input" placeholder="Search for news...">
+          <input type="text" id="search-input" placeholder="Search for news..." required>
           <button type="submit" id="search-btn">Search</button>
       </form>
     </div>  
@@ -105,7 +105,7 @@
     <div class="news-section">
       <div class="container2">
         <div class="row">
-          <div class="title">
+          <div id="title" class="title">
               <h1>Pilihan Berita</h1>
           </div>
         </div>
@@ -134,39 +134,91 @@
 
     <script src="./js/news.js"></script>
     <script>
-      async function getNews() {
-        try {
-          const response = await fetch('http://localhost:4000/api/articles');
-          const data = await response.json();
+        const urlSearch = new URLSearchParams(window.location.search);
+        const searchValue = urlSearch.get('search')
 
-          if (data) {
-            let news = '';
+        const urlCategories = new URLSearchParams(window.location.search);
+        const categoriesValue = urlCategories.get('categories')
+        console.log(categoriesValue);
 
-            data.forEach((article, index) => {
-              news += `
-                <div class="card">
-                  <a href="Read.html?id=${article.id}">
-                    <div class="image-section">
-                      <img src="${article.image}">
-                    </div>
-                    <div class="content">
-                      <h3>${article.title}</h3>
-                      <h4>${article.categories.categories}</h4>
-                      <p>${article.preview}</p>
-                    </div>
-                  </a>
-                </div>
-              `;
-            })
+        async function getNewsByCategories() {
+            try {
+                const response = await fetch('http://localhost:4000/api/articles/categories/search?category=' + categoriesValue);
+                const data = await response.json();
+                console.log(categoriesValue);
 
-            document.getElementById('news').innerHTML = news;
-          } else {
-            console.log('No data available.');
-          }
-        } catch (error) {
-          console.error(error);
+                let title = `
+                    <h1>${categoriesValue}</h1>
+                `;
+                document.getElementById('title').innerHTML = title;
+
+                if (data) {
+                    let news = '';
+
+                    data.forEach((article, index) => {
+                    news += `
+                        <div class="card">
+                        <a href="Read.html?id=${article.id}">
+                            <div class="image-section">
+                            <img src="${article.image}">
+                            </div>
+                            <div class="content">
+                            <h3>${article.title}</h3>
+                            <h4>${article.categories.categories}</h4>
+                            <p>${article.preview}</p>
+                            </div>
+                        </a>
+                        </div>
+                    `;
+                    })
+
+                    document.getElementById('news').innerHTML = news;
+                } else {
+                    console.log('No data available.');
+                }
+            }   catch (error) {
+                console.error(error);
+            }
         }
-      }
+        async function getNewsBySearch() {
+            try {
+                const response = await fetch('http://localhost:4000/api/articles/search?query=' + searchValue);
+                const data = await response.json();
+                console.log(searchValue);
+
+                let title = `
+                    <h1>${searchValue}</h1>
+                `;
+                document.getElementById('title').innerHTML = title;
+
+                if (data) {
+                    let news = '';
+
+                    data.forEach((article, index) => {
+                    news += `
+                        <div class="card">
+                        <a href="Read.html?id=${article.id}">
+                            <div class="image-section">
+                            <img src="${article.image}">
+                            </div>
+                            <div class="content">
+                            <h3>${article.title}</h3>
+                            <h4>${article.categories.categories}</h4>
+                            <p>${article.preview}</p>
+                            </div>
+                        </a>
+                        </div>
+                    `;
+                    })
+
+                    document.getElementById('news').innerHTML = news;
+                } else {
+                    console.log('No data available.');
+                }
+            }   catch (error) {
+                console.error(error);
+            }
+        }
 
       async function getCategories() {
         try {
@@ -191,8 +243,11 @@
         }
       }
 
-      getNews();
-      getCategories();
+      if (searchValue) {
+        getNewsBySearch();
+      } else if (categoriesValue) {
+        getNewsByCategories();
+      }
 
       document.getElementById('categories').addEventListener('change', function() {
         const selectedCategory = this.value;
@@ -204,6 +259,8 @@
         const searchValue = document.getElementById('search-input').value;
         window.location.href = `listNews.html?search=${searchValue}`;
       })
+
+      getCategories();
     </script>
 </body>
 </html>
